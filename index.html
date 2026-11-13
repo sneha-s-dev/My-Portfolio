@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curated Self | Interactive Portfolio & Museum</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icon Set -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- THEME & MODE SWITCHER BAR -->
+    <div class="theme-bar">
+        <span class="theme-label"><i data-lucide="palette"></i> View Mode:</span>
+        <button class="theme-btn active" data-theme="light"><i data-lucide="sun"></i> Light</button>
+        <button class="theme-btn" data-theme="dark"><i data-lucide="moon"></i> Dark</button>
+        <button class="theme-btn" data-theme="night"><i data-lucide="eye"></i> Night Mode</button>
+    </div>
+
+    <!-- PROFILE HERO SECTION (ADVERTISE YOURSELF) -->
+    <header class="profile-hero">
+        <div class="profile-card">
+            <div class="profile-avatar-frame">
+                <img src="me (1).jpg" alt="Profile Picture" class="profile-avatar">
+            </div>
+            <div class="profile-info">
+                <span class="badge">Business Administration (Minors) • Batch 2025–2029</span>
+                <h1>Hey! I'm Sneha S</h1>
+                
+                <!-- Headline (15 words or fewer) -->
+                <p class="profile-headline">
+                    "Driven Data Science major with a minor in Business Administration, specialized in turning complex data into compelling business narratives."
+                </p>
+
+                <p class="summary-text">
+                    Welcome to my living digital portfolio and museum. I build web experiences, explore creative mediums, and document my continuous journey of academic and personal growth.
+                </p>
+
+                <!-- Strengths & Career Aspiration -->
+                <div class="hero-highlights">
+                    <div class="highlight-item">
+                        <strong><i data-lucide="target"></i> Career Goal:</strong>
+                        <span>Aspiring Strategic Marketing Consultant & Product Brand Manager.</span>
+                    </div>
+                    <div class="highlight-item">
+                        <strong><i data-lucide="award"></i> Core Strengths (Rule of 3):</strong>
+                        <span> Data-Driven Storytelling | Digital Branding & UX  | Cross-Functional Leadership</span>
+                    </div>
+                </div>
+
+                <div class="profile-meta">
+                    <span class="meta-tag"><i data-lucide="map-pin"></i> Based in Bengaluru</span>
+                    <span class="meta-tag"><i data-lucide="book-open"></i> Student, Data Science & Business Administration</span>
+                    <a href="https://www.linkedin.com/in/sneha-s-10b29b388/" target="_blank" class="meta-tag social-link"><i data-lucide="linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <!-- SELF-PROJECTION VIDEO SECTION -->
+<section class="video-hero-card">
+    <!-- 1. PREVIEW CARD (Visible first) -->
+    <div class="video-preview-card clickable" id="videoPreviewCard">
+        <div class="video-info">
+            <span class="tag"><i data-lucide="video"></i> CIE 3 Deliverable</span>
+            <h2>Self-Projection Video (60–90s)</h2>
+            <p>A quick pitch introducing who I am, what I aim to become, and the core value I offer to recruiters.</p>
+            <span class="click-hint"><i data-lucide="play-circle"></i> Click Card to Watch Pitch Video →</span>
+        </div>
+        <div class="video-thumbnail-frame">
+            <img src="video_thumbnail.jpg" alt="Video Thumbnail">
+            <div class="play-overlay"><i data-lucide="play"></i></div>
+        </div>
+    </div>
+
+    <!-- 2. INLINE VIDEO PLAYER (Hidden initially) -->
+  <!-- INLINE VIDEO PLAYER -->
+<div class="video-player-wrapper" id="videoPlayerWrapper" style="display: none;">
+    <!-- Close Button Moved to Top -->
+    <button class="close-video-btn" id="closeVideoBtn">
+        <i data-lucide="x"></i> 
+    </button>
+
+    <div class="video-container">
+        <video id="selfVideo" controls width="100%">
+            <source src="intro_video_final.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+</section>
+
+    <!-- FILTER BAR -->
+    <nav class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Modules</button>
+        <button class="filter-btn" data-filter="academics">Academic Path</button>
+        <button class="filter-btn" data-filter="sb1022">Business Comm (SB1022)</button>
+        <button class="filter-btn" data-filter="blog">My Blog</button>
+        <button class="filter-btn" data-filter="recs">Recommended Talks</button>
+        <button class="filter-btn" data-filter="tech">Tech & Projects</button>
+        <button class="filter-btn" data-filter="cooking">Culinary</button>
+        <button class="filter-btn" data-filter="photography">Photography</button>
+        <button class="filter-btn" data-filter="crafts">Crafts & Arts</button>
+        <button class="filter-btn" data-filter="life">Life & Music</button>
+        <button class="filter-btn" data-filter="lasts">The Lasts</button>
+    </nav>
+
+    <!-- MAIN INTERACTIVE MUSEUM CONTAINER -->
+    <main class="museum-container">
+
+        <!-- SECTION 1: ACADEMIC JOURNEY (SEMESTER BY SEMESTER) -->
+        <section class="module-section" data-category="academics">
+            <div class="module-header">
+                <i data-lucide="graduation-cap"></i>
+                <h2>My Journey: Semester by Semester</h2>
+            </div>
+            <p class="section-hint">Click on any academic phase below to explore campus vibes and course listings:</p>
+
+            <div class="academic-tabs">
+                <button class="tab-btn active" data-tab="sem1">Sem 1</button>
+                <button class="tab-btn" data-tab="sem2">Sem 2</button>
+                <button class="tab-btn" data-tab="sem3">Sem 3 (Current)</button>
+                <button class="tab-btn" data-tab="future">Semesters 4–8</button>
+            </div>
+
+            <!-- Tab Content: Sem 1 -->
+            <div class="academic-content active" id="tab-sem1">
+                <div class="academic-grid">
+                    <div class="academic-media">
+                        <img src="sem1.jpg" alt="Semester 1">
+                    </div>
+                    <div class="academic-details">
+                        <span class="tag">Foundation Stage</span>
+                        <h3>Semester 1 — The Kickstart</h3>
+                        <p class="vibe-text"><strong>Vibe:</strong> Orientation excitement, group icebreakers, and establishing academic rigor.</p>
+                        <ul class="learning-list">
+                            <li>Programming with C</li>
+                            <li>Linux & Shell Programming</li>
+                            <li>Elements of Linear Algebra</li>
+                            <li>Web & UX Design</li>
+                            <li>Structured Innovation & Design Thinking</li>
+                            <li>Universal Human Values</li>
+                            <li>Digital Logic & Computer Organisation</li>
+                            <li>Indian Knowledge System</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Sem 2 -->
+            <div class="academic-content" id="tab-sem2">
+                <div class="academic-grid">
+                    <div class="academic-media">
+                        <img src="sem2.jpg" alt="Semester 2">
+                    </div>
+                    <div class="academic-details">
+                        <span class="tag">Skill Building</span>
+                        <h3>Semester 2 — Core Analytics </h3>
+                        <p class="vibe-text"><strong>Vibe:</strong> Classroom changes, deep library sessions and team presentations.</p>
+                        <ul class="learning-list">
+                            <li>Database Management Systems</li>
+                            <li>Operating Systems</li>
+                            <li>English Communication</li>
+                            <li>Discrete Maths & Set Theory</li>
+                            <li>Python Programming for Data Analytics</li>
+                            <li>Introduction to Version Control</li>
+                            <li>Entrepreneurial Mindset</li>
+                            <li>Data Structures using C</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+          <!-- Tab Content: Sem 3 -->
+            <div class="academic-content" id="tab-sem3">
+                <div class="academic-grid">
+                    <!-- Gallery wrapper for stacked images -->
+                    <div class="academic-media academic-gallery">
+                        <img src="bhaitak.jpg" alt="Semester 3 - Baithak">
+                        <img src="karunaada_sambhrama.jpg" alt="Karunaadu Sambhrama">
+                    </div>
+                    <div class="academic-details">
+                        <span class="tag">Active Semester</span>
+                        <h3>Semester 3 — Skill & Interests</h3>
+                        <p class="vibe-text"><strong>Vibe:</strong> Hackathon energy, web portfolio building, and active music sessions.</p>
+                        <ul class="learning-list">
+                            <li>Data Science (Major)</li>
+                            <li>Business Communication (Minors)</li>
+                            <li>Basics of Business (Minors)</li>
+                            <li>Hindustani Vocals L1 (Electives) - Guided by Guru Sameer Havaldar</li>
+                            <li>Yoga & Well Being</li>
+                            <li>Object Oriented Programming with Java</li>
+                            <li>Numerical Methods</li>
+                            <li>Summer Internship</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Future -->
+            <div class="academic-content" id="tab-future">
+                <div class="academic-grid">
+                    <div class="academic-media">
+                        <img src="future_sem.jpg" alt="Future Semesters">
+                    </div>
+                    <div class="academic-details">
+                        <span class="tag">Roadmap</span>
+                        <h3>Semesters 4 through 8</h3>
+                        <p class="vibe-text"><strong>Status:</strong> Coming Soon — Advanced specialization, Capstone Internship, and Startup Incubation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: BUSINESS COMMUNICATION (SB1022) COURSE PAGE -->
+        <section class="module-section" data-category="sb1022">
+            <div class="module-header">
+                <i data-lucide="book-open-check"></i>
+                <h2>Business Communication (SB1022) Hub</h2>
+            </div>
+            <p class="section-hint">Course Overview: 5 Core Modules, Submissions, Classroom Activities & Video Takeaways.</p>
+
+            <div class="sb1022-grid">
+                <!-- Modules & Syllabus Summary -->
+                <div class="sb-card">
+                    <h3><i data-lucide="layers"></i> 5 Course Modules</h3>
+                    <ol class="module-ol">
+                        <li><strong>Module 1:</strong> Communication, Types & Barriers</li>
+                        <li><strong>Module 2:</strong> Types of Non-Verbal Communication</li>
+                        <li><strong>Module 3:</strong> Business Writing (Emails, Messages & Memos)</li>
+                        <li><strong>Module 4:</strong> Business Reports & Data Visuals</li>
+                        <li><strong>Module 5:</strong> Debates, Discussions & Presentations</li>
+                    </ol>
+                </div>
+
+                <!-- Vocabulary & Key Learnings -->
+                <div class="sb-card">
+                    <h3><i data-lucide="book-marked"></i> Professional Vocabulary & Learnings</h3>
+                    <ul class="vocab-list">
+                        <li><strong>Audience First:</strong> Tailoring message structure to reader needs before writing.</li>
+                        <li><strong>Rule of Three:</strong> Presenting key points in threes for maximum retention.</li>
+                        <li><strong>Digital Body Language:</strong> Formatting cues that signal professionalism online.</li>
+                        <li><strong>F-Pattern Scanning:</strong> Structuring web copy with bold headings for quick scanning.</li>
+                        <li><strong>7 Cs of Communication:</strong> Clear, Concise, Concrete, Correct, Coherent, Complete, Courteous.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="subsection-title"><i data-lucide="video"></i> Assigned Class Videos & Takeaways</h3>
+            <div class="items-grid">
+                
+                <article class="sub-card clickable"
+                         data-modal-title="Steve Jobs — Case Study in Presentation"
+                         data-modal-tag="Module 1 • Communication"
+                         data-modal-img="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&auto=format&fit=crop"
+                         data-modal-body="Takeaway: Masterful public speaking relies on simple headlines, immense rehearsal, and building a dramatic narrative around product value."
+                         data-modal-link="https://youtu.be/MnrJzXM7a6o?si=33O9ryaXsI7hq4P3">
+                    <div class="media-frame">
+                        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&auto=format&fit=crop" alt="Steve Jobs Presentation">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> View Takeaway</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Module 1</span>
+                        <h3>Steve Jobs Presentation Study</h3>
+                        <p>Rehearsal and narrative structure build impact.</p>
+                        <span class="click-hint">Explore Video →</span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable"
+                         data-modal-title="Your Body Language May Shape Who You Are — Amy Cuddy"
+                         data-modal-tag="Module 2 • Non-Verbal"
+                         data-modal-img="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?w=800&auto=format&fit=crop"
+                         data-modal-body="Takeaway: Non-verbal posture influences both how others perceive us and our internal confidence levels before high-stakes meetings."
+                         data-modal-link="https://youtu.be/Ks-_Mh1QhMc?si=Lt_9g26sQdiK5ZBQ">
+                    <div class="media-frame">
+                        <img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?w=600&auto=format&fit=crop" alt="Amy Cuddy TED">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> View Takeaway</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Module 2</span>
+                        <h3>Amy Cuddy: Body Language</h3>
+                        <p>Posture shapes both perception and inner state.</p>
+                        <span class="click-hint">Explore Video →</span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable"
+                         data-modal-title="How to Write an Email — Victoria Turk"
+                         data-modal-tag="Module 3 • Business Writing"
+                         data-modal-img="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop"
+                         data-modal-body="Takeaway: Effective business emails require crisp subject lines, direct action items, and respectful brevity."
+                         data-modal-link="https://youtu.be/SBTojgEHl90?si=uMArBLSsmylnWZZl">
+                    <div class="media-frame">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop" alt="Victoria Turk TED">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> View Takeaway</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Module 3</span>
+                        <h3>Victoria Turk: Email Etiquette</h3>
+                        <p>Respect time with clear, action-oriented writing.</p>
+                        <span class="click-hint">Explore Video →</span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable"
+                        data-modal-title="Making Data Mean More Through Storytelling — Ben Wellington"
+                        data-modal-tag="Module 4 • Business Reports"
+                        data-modal-img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop"
+                        data-modal-body="Takeaway: Raw numbers and complex datasets alienate decision-makers; pairing data with human context, clear visuals, and narrative structure makes statistics meaningful and actionable."
+                        data-modal-link="https://youtu.be/6xsvGYIxJok?si=sGTYkGYC5kULyrhT">
+                    <div class="media-frame">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop" alt="Ben Wellington TEDx Talk">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> View Takeaway</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Module 4</span>
+                        <h3>Ben Wellington: Data Storytelling</h3>
+                        <p>Humanizing complex statistics and data through compelling narrative structure.</p>
+                        <span class="click-hint">Explore Video →</span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable"
+                         data-modal-title="How to Speak So That People Want to Listen — Julian Treasure"
+                         data-modal-tag="Module 5 • Speaking"
+                         data-modal-img="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop"
+                         data-modal-body="Takeaway: Use HAIL (Honesty, Authenticity, Integrity, Love) and vocal warmups to command attention warmly."
+                         data-modal-link="https://youtu.be/eIho2S0ZahI?si=CKr4TgXqMmEVN2bu">
+                    <div class="media-frame">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop" alt="Julian Treasure TED">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> View Takeaway</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Module 5</span>
+                        <h3>Julian Treasure: Powerful Speech</h3>
+                        <p>Voice timbre and authenticity command respect.</p>
+                        <span class="click-hint">Explore Video →</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: MY BLOG / WRITE-UPS -->
+        <section class="module-section" data-category="blog">
+            <div class="module-header">
+                <i data-lucide="pen-tool"></i>
+                <h2>My Blog & Write-ups</h2>
+            </div>
+            <p class="section-hint">Reflections and expressions through words.</p>
+            
+            <div class="items-grid">
+                
+                <article class="sub-card clickable"
+                         data-modal-title="Sustainability has always been the trend, baby!"
+                         data-modal-tag="Blog Post • March 2026"
+                         data-modal-img="sustainibility.jpg"
+                         data-modal-body="The blog that just asked me to just start. This was the pilot that said everything need not be perfect to be meaningful. Read how a small action that I saw made me write this small piece."
+                         data-modal-link="https://substack.com/@snehathoughtthis/p-192511057">
+                    <div class="media-frame">
+                        <img src="sustainibility.jpg" alt="Strategy & Tech">
+                        <div class="click-overlay"><i data-lucide="file-text"></i> Read Post</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Blog Post 01</span>
+                        <h3>Sustainability has always been the trend, baby!</h3>
+                        <p>My first blog post on Substack.</p>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable"
+                         data-modal-title="Stop sanctioning leaves to your Zygomaticus Major!"
+                         data-modal-tag="Blog Post • March 2026"
+                         data-modal-img="smiles.jpg"
+                         data-modal-body="A quick thread of words that serve as a reminder to smile more 'cause it doesn't hurt. I wanted to use the word Zygomaticus Major in a sentence because I had just learned that's the facial muscle that helps with smiling and this was the perfect opportunity to do so."
+                         data-modal-link="https://substack.com/@snehathoughtthis/p-192611567">
+                    <div class="media-frame">
+                        <img src="smiles.jpg" alt="Smile doodle">
+                        <div class="click-overlay"><i data-lucide="file-text"></i> Read Post</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Blog Post 02</span>
+                        <h3>Stop sanctioning leaves to your Zygomaticus Major!</h3>
+                        <p>The importance of smiling.</p>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable"
+                         data-modal-title="When path is the only way home"
+                         data-modal-tag="Blog Post • April 2026"
+                         data-modal-img="path.png"
+                         data-modal-body="There has to be a song that made you want to sit for a while and look deeper into yourself. For me, it was 'Kelu Krishna'."
+                         data-modal-link="https://substack.com/@snehathoughtthis/p-193102247">
+                    <div class="media-frame">
+                        <img src="path.png" alt="Strategy & Tech">
+                        <div class="click-overlay"><i data-lucide="file-text"></i> Read Post</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Blog Post 03</span>
+                        <h3>When path is the only way home</h3>
+                        <p>A song that made me reflect on the journey of self-discovery and write about it.</p>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable"
+                         data-modal-title="I am not able to see clothes as clothes!"
+                         data-modal-tag="Blog Post • June 2026"
+                         data-modal-img="clip.jpg"
+                         data-modal-body="Who am I without random thoughts and over analysing things. Metaphors are the reason behind my overanalysis. Here is a peek into my head."
+                         data-modal-link="https://substack.com/@snehathoughtthis/p-200584439">
+                    <div class="media-frame">
+                        <img src="clip.jpg" alt="clip">
+                        <div class="click-overlay"><i data-lucide="file-text"></i> Read Post</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Blog Post 04</span>
+                        <h3>I am not able to see clothes as clothes!</h3>
+                        <p>Yet another random writing.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION 4: RECOMMENDED VIDEOS & LECTURES -->
+        <section class="module-section" data-category="recs">
+            <div class="module-header">
+                <i data-lucide="sparkles"></i>
+                <h2>Recommended Talks & Lectures</h2>
+            </div>
+            <p class="section-hint">Handpicked lectures on leadership, tech, and design thinking.</p>
+
+            <div class="items-grid">
+                <article class="sub-card clickable"
+                       data-modal-title="The Thrilling Potential of SixthSense Technology — Pranav Mistry"
+                       data-modal-tag="TED Talk"
+                       data-modal-img="pranav_mistry.jpg"
+                       data-modal-body="Takeaway: True technological breakthroughs happen when we free information from screens and seamlessly weave digital data into the physical objects around us."
+                       data-modal-link="https://www.ted.com/talks/pranav_mistry_the_thrilling_potential_of_sixthsense_technology">
+                    <div class="media-frame">
+                        <img src="pranav_mistry.jpg" alt="Pranav Mistry TED">
+                        <div class="click-overlay"><i data-lucide="external-link"></i> Open Talk</div>
+                    </div>
+                    <div class="sub-card-body">
+                      <span class="tag">Human-Computer Tech</span>
+                      <h3>Pranav Mistry: SixthSense Tech</h3>
+                      <p>Bridging the physical world and digital interfaces.</p>
+                      <span class="click-hint">View Takeaway →</span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable"
+                        data-modal-title="Effective Communication — Dr. Rashmi Dubey"
+                        data-modal-tag="TEDx Talk"
+                        data-modal-img="rashmi_dubey.jpg"
+                        data-modal-body="Takeaway: Business communication is a muscle strengthened by adaptability, active listening, and persistent clarity during tough negotiations."
+                        data-modal-link="https://www.youtube.com/watch?v=5AVfvaxbuQw">
+                    <div class="media-frame">
+                        <img src="rashmi_dubey.jpg" alt="Dr. Rashmi Dubey TEDx">
+                        <div class="click-overlay"><i data-lucide="external-link"></i> Open Talk</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Business Communication</span>
+                        <h3>Dr. Rashmi Dubey: Communication</h3>
+                        <p>Turning adaptability and clarity into a career advantage.</p>
+                        <span class="click-hint">View Takeaway →</span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable"
+                        data-modal-title="Build a School in the Cloud — Sugata Mitra"
+                        data-modal-tag="TED Talk"
+                        data-modal-img="sugata_mitra.jpg"
+                        data-modal-body="Takeaway: Pairing simple internet access with self-organized peer groups proves that curiosity and technology can bridge deep educational divides without heavy top-down control."
+                        data-modal-link="https://www.ted.com/talks/sugata_mitra_build_a_school_in_the_cloud">
+                    <div class="media-frame">
+                        <img src="sugata_mitra.jpg" alt="Sugata Mitra TED">
+                        <div class="click-overlay"><i data-lucide="external-link"></i> Open Talk</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">EdTech & Innovation</span>
+                        <h3>Sugata Mitra: School in the Cloud</h3>
+                        <p>Using connected peer groups to transform self-directed learning.</p>
+                        <span class="click-hint">View Takeaway →</span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable"
+                        data-modal-title="How Great Leaders Inspire Action — Simon Sinek"
+                        data-modal-tag="TEDx Talk"
+                        data-modal-img="simon_great_leader.jpg"
+                        data-modal-body="Takeaway: People do not buy what you do; they buy why you do it, so persuasive leaders always communicate their core purpose before explaining their products."
+                        data-modal-link="https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action">
+                    <div class="media-frame">
+                        <img src="simon_great_leader.jpg" alt="Simon Sinek TED">
+                        <div class="click-overlay"><i data-lucide="external-link"></i> Open Talk</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Business Communication</span>
+                        <h3>Simon Sinek: Inspire Action</h3>
+                        <p>Communicating core purpose to inspire teams and customers.</p>
+                        <span class="click-hint">View Takeaway →</span>
+                    </div>
+                </article>
+                
+                <article class="sub-card clickable"
+                    data-modal-title="Corporate Sector and Trans-Inclusion — Amita Karadkhedkar"
+                    data-modal-tag="TEDx Talk"
+                    data-modal-img="amita.jpg"
+                    data-modal-body="Takeaway: True corporate inclusion moves beyond policy labels to build visible role models and psychologically safe spaces in banking and tech."
+                    data-modal-link="https://www.youtube.com/watch?v=CVD5JpBSYLU">
+                <div class="media-frame">
+                    <img src="amita.jpg" alt="Amita Karadkhedkar TEDx">
+                    <div class="click-overlay"><i data-lucide="external-link"></i> Open Talk</div>
+                </div>
+                <div class="sub-card-body">
+                    <span class="tag">FinTech & Leadership</span>
+                    <h3>Amita Karadkhedkar: Trans-Inclusion</h3>
+                    <p>Building authentic diversity in banking technology leadership.</p>
+                    <span class="click-hint">View Takeaway →</span>
+                </div>
+                </article>
+
+                <article class="sub-card clickable"
+                        data-modal-title="Designers — Think Big! — Tim Brown"
+                        data-modal-tag="TED Talk"
+                        data-modal-img="tim_brown.jpg"
+                        data-modal-body="Takeaway: Design thinking moves beyond making attractive objects to solving complex human problems by balancing desirability, technical feasibility, and business viability."
+                        data-modal-link="https://www.ted.com/talks/tim_brown_designers_think_big">
+                    <div class="media-frame">
+                        <img src="tim_brown.jpg" alt="Tim Brown TED">
+                        <div class="click-overlay"><i data-lucide="external-link"></i> Open Talk</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Design Thinking</span>
+                        <h3>Tim Brown: Think Big</h3>
+                        <p>Using human-centered design to solve complex systemic problems.</p>
+                        <span class="click-hint">View Takeaway →</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 5: HACKATHONS & TECH PROJECTS -->
+        <section class="module-section" data-category="tech">
+            <div class="module-header">
+                <i data-lucide="trophy"></i>
+                <h2>Hackathons, Web Apps & Projects</h2>
+            </div>
+            <div class="items-grid">
+                
+                <article class="sub-card clickable" 
+                        data-modal-title="Eterna - The Cultural Loss Prevention Website"
+                        data-modal-tag="Semester 1 Project : Web Development Course"
+                        data-modal-img="eterna_logo_resized.jpg"
+                        data-modal-body="Built an informative website to raise awareness about cultural heritage preservation. The future goal was to integrate a donation portal and connect artists who are continuing to create and share their work."
+                        data-modal-link="https://github.com/sneha-s-dev/Eterna">
+                    <div class="media-frame">
+                        <img src="eterna_logo_resized.jpg" alt="Eterna - Cultural Loss Prevention Site">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Sem 1 Web Project</span>
+                        <h3>Eterna</h3>
+                        <p>Informative portal for preserving cultural heritage and connecting local artists.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="F1 Data Analysis"
+                         data-modal-tag="Semester 2 Project : Python Data Analysis"
+                         data-modal-img="f1_car.avif"
+                         data-modal-body="It is important for understanding racing dynamics. The driver should also know when to take pit stops based on lap times and tire wear patterns which will impact their performance and winning chances."
+                         data-modal-link="#">
+                    <div class="media-frame">
+                        <img src="f1_car.avif" alt="F1 Data Analysis">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Basic Data Analysis</span>
+                        <h3>F1 Data Analysis</h3>
+                        <p>Analyzed Formula 1 racing data to identify performance trends and driver statistics.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="MPLADS Anamolies and Fraud Detection AI Application"
+                         data-modal-tag="SIH Internal Hackathon Project"
+                         data-modal-img="mplads.png"
+                         data-modal-body="The MPLADS AI-Shield project was designed to detect anomalies and potential fraud in the MPLADS data using machine learning algorithms. The application analyzes patterns in the data to identify irregularities which can be the change in the geographical coordinated from the images, ineffiencient fund allocation and usage that may indicate fraudulent activities."
+                         data-modal-link="#">
+                    <div class="media-frame">
+                        <img src="mplads.png" alt="Analytics">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">SIH Internal Hackathon Project</span>
+                        <h3>MPLADS AI-Shield</h3>
+                        <p>Detected the fraud rate and anomalies in MPLADS data using machine learning algorithms.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Mystery Mission Board"
+                         data-modal-tag="Structured Innovation & Design Thinking"
+                         data-modal-img="board_game3.jpg"
+                         data-modal-body="Designed a board game to simulate real-world business challenges and encourage strategic thinking. Players navigate through various scenarios which involves both physical tasks and mental riddles, making decisions that impact their success and learning the importance of innovation and adaptability."
+                         data-modal-link="#">
+                    <div class="media-frame">
+                        <img src="board_game3.jpg" alt="Mystery Mission Board">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Structured Innovation & Design Thinking</span>
+                        <h3>Mystery Mission Board</h3>
+                        <p>A board game designed as a part of structured innovation Course.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION 6: COOKING & CULINARY EXPERIMENTS -->
+        <section class="module-section" data-category="cooking">
+            <div class="module-header">
+                <i data-lucide="utensils"></i>
+                <h2>Cooking & Culinary Experiments</h2>
+            </div>
+            <p class="section-hint">Click on any dish below to view the recipe breakdown and culinary notes:</p>
+
+            <div class="items-grid">
+                
+                <article class="sub-card clickable" 
+                         data-modal-title="Comfort Food"
+                         data-modal-tag="Culinary • Capsicum Curd Met Aloo Fry"
+                         data-modal-img="comfort_food.jpeg"
+                         data-modal-body="Nothing ever beats a good home-cooked meal. For me, this is it. The creamy capsicum curd with a side of aloo fry is a comfort food that brings back memories of home and family dinners. The balance of flavors and textures makes it a simple yet satisfying dish. That's the last time the potato fry tasted so good! I have been trying the same recipe but never got the right taste again. I love how good the food tasted but hate how bad my food photography is.">
+                    <div class="media-frame">
+                        <img src="comfort_food.jpeg" alt="Food">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Recipe 01</span>
+                        <h3>Capsicum Curd with Aloo Fry</h3>
+                        <p>Homemade meal that fills my soul</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Cucumber & Mint Chutney Sandwich"
+                         data-modal-tag="Culinary • Sandwiches & Wafers"
+                         data-modal-img="cucumber_sandwich.jpg"
+                         data-modal-body="A refreshing and healthy sandwich featuring crisp cucumber and aromatic mint chutney. Perfect for a light snack. This turned out spicier than expected but loved how the cucumber and little onions balanced it.">
+                    <div class="media-frame">
+                        <img src="cucumber_sandwich.jpg" alt="Cucumber & Mint Chutney Sandwich">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Recipe 02</span>
+                        <h3>Cucumber & Mint Chutney Sandwich</h3>
+                        <p>A quick recipe that I made up in head and wanted it on my plate.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="White Sauce Pasta"
+                         data-modal-tag="Culinary • Italian"
+                         data-modal-img="pasta.jpg"
+                         data-modal-body="This was a huge task for me to cook something that I never like having. The choice of oregano was faulty. The sauce came out pretty nice but the pasta was a bit overcooked. I will try this again and make it better next time.">
+                    <div class="media-frame">
+                        <img src="pasta.jpg" alt="Fresh Pasta">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Recipe 03</span>
+                        <h3>White Sauce Pasta</h3>
+                        <p>Not a fan of Pasta but was a good try.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Classic Vada Pav"
+                         data-modal-tag="Culinary • Desi Snack"
+                         data-modal-img="vadapav.jpg"
+                         data-modal-body="A recipe that looked quick on Instagram but in real, it took about three hours to be made. Deciding how to deep fry the vada without letting the aloo slipping into the oil was a challenge. It was handled by adjusting the batter consistency.">
+                    <div class="media-frame">
+                        <img src="vadapav.jpg" alt="Classic Vada Pav">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Recipe 04</span>
+                        <h3>Classic Vada Pav</h3>
+                        <p>A traditional Indian street food that came out perfectly.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+         <!-- SECTION 7: Photography -->
+        <section class="module-section" data-category="photography">
+            <div class="module-header">
+                <i data-lucide="palette"></i>
+                <h2>Photography</h2>
+            </div>
+            <div class="items-grid">
+                
+                <article class="sub-card clickable" 
+                         data-modal-title="Sun bids goodbye"
+                         data-modal-tag="Moments & Landscapes"
+                         data-modal-img="sunset.jpg"
+                         data-modal-body="I know you would be searching where's the sunset! Captured this with a 50mm prime lens during a serene evening walk. The interplay of warm hues and soft shadows created a tranquil mood. I still considered this a good shot but everything can still be improved. I am still learning and exploring the art of photography.">
+                    <div class="media-frame">
+                        <img src="sunset.jpg" alt="sunset">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Camera Lens</span>
+                        <h3>Sunset and Serenity</h3>
+                        <p>A pleasant evening's memory</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="A tree serving main character"
+                         data-modal-tag="Food and Nature"
+                         data-modal-img="tree.jpg"
+                         data-modal-body="Had gone to eat Masalapuri but ended up capturing this on my phone. I never knew how this picture turned out until I examined it at home.">
+                    <div class="media-frame">
+                        <img src="tree.jpg" alt="Embroidery">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Mobile Photography</span>
+                        <h3>Tree: The Main Character</h3>
+                        <p>I am always amazed by whatever the nature brings.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Lantana Montevidensis"
+                         data-modal-tag="Nature Photography"
+                         data-modal-img="flowers.jpg"
+                         data-modal-body="I had gone for a dental appointment. Quickly took this photo during the wait.">
+                    <div class="media-frame">
+                        <img src="flowers.jpg" alt="flower">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Nature Photography</span>
+                        <h3>Lantana Montevidensis</h3>
+                        <p>A wait to be photographed</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                      <article class="sub-card clickable" 
+                         data-modal-title="Sulphur Butterfly on a Flower"
+                         data-modal-tag="Nature Photography"
+                         data-modal-img="butterfly.jpg"
+                         data-modal-body="More like a buy 1 get 1 free offer. Clicked flowers and got a butterfly captured too. But then the nature crisis hit me and I couldn't stop about improving it.">
+                    <div class="media-frame">
+                        <img src="butterfly.jpg" alt="Sulphur Butterfly">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Nature Photography</span>
+                        <h3>Sulphur Butterfly on a Flower</h3>
+                        <p>The loss of colours in butterflies concerns me.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+                </div>
+                </section>
+
+        <!-- SECTION 7: TACTILE ARTS & CRAFTS -->
+        <section class="module-section" data-category="crafts">
+            <div class="module-header">
+                <i data-lucide="palette"></i>
+                <h2>Crafts, Painting & Embroidery</h2>
+            </div>
+            <div class="items-grid">
+                
+                <article class="sub-card clickable" 
+                         data-modal-title="The Face"
+                         data-modal-tag="Abstract Art"
+                         data-modal-img="face.jpg"
+                         data-modal-body="Strokes of pen that converges into a face. Abstract art being one of my favourite art forms, I wanted to try my hand at it. The face is a representation of the human condition and the strokes are a reflection of the complexity of our emotions.">
+                    <div class="media-frame">
+                        <img src="face.jpg" alt="abstract">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Abstract Art</span>
+                        <h3>The Face</h3>
+                        <p>An impressive representation of the human condition.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="A Lovely Pair"
+                         data-modal-tag="Embroidery"
+                         data-modal-img="embroidery.jpg"
+                         data-modal-body="Hand-stitched what I would like to call as stick persons and a heart. The embroidery is a representation of the love and connection between two people. The stitches are a reflection of the care and attention that goes into nurturing a relationship.">
+                    <div class="media-frame">
+                        <img src="embroidery.jpg" alt="Embroidery">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Embroidery</span>
+                        <h3>A Lovely Pair</h3>
+                        <p>A gift that turned out into a beautiful keepsake.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Womenia"
+                         data-modal-tag="Doodle"
+                         data-modal-img="doodle.jpg"
+                         data-modal-body="I am now convinced that anything turns into art when you are bored. The doodle is a representation of the creativity and imagination that can be sparked by boredom. The lines and shapes are a reflection of the free-flowing nature of our thoughts and ideas.">
+                    <div class="media-frame">
+                        <img src="doodle.jpg" alt="Doodle">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Doodle</span>
+                        <h3>Womenia</h3>
+                        <p>I am mapping my identity with scary doodles at this point.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Patterns Everywhere"
+                         data-modal-tag="Mandala Art"
+                         data-modal-img="mandala.jpg"
+                         data-modal-body="I loved how this art always brings me joy and keeps me hooked until I am done. Every minute pattern that leads into a bigger pattern is a reflection of the interconnectedness of all things. The intricate designs are a representation of the complexity and beauty of the natural world.">
+                    <div class="media-frame">
+                        <img src="mandala.jpg" alt="Mandala Art">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Mandala Art</span>
+                        <h3>Patterns Everywhere</h3>
+                        <p>Reason for my patience and consistency is this most favorite art work of mine.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION 8: THE LASTS -->
+        <section class="module-section" data-category="lasts">
+            <div class="module-header">
+                <i data-lucide="clock"></i>
+                <h2>The Lasts</h2>
+            </div>
+            <div class="items-grid">
+                
+                <article class="sub-card clickable" 
+                         data-modal-title="Love, Hope and Magic"
+                         data-modal-tag="Last Book Read"
+                         data-modal-img="last_book_copy.jpg"
+                         data-modal-body="This is the first poetry book I have ever bought home. Happy to say that it didn't disappoint. The poems are short, simple and yet they have a way of making you feel like you are in a warm cup of tea on a winter morning.">
+                    <div class="media-frame">
+                        <img src="last_book_copy.jpg" alt="Book">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Last Book</span>
+                        <h3>"Love, Hope and Magic"</h3>
+                        <p>A poetry that felt like a warm cup of tea on a winter morn.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                        data-modal-title="Tu Hi Re" 
+                        data-modal-tag="Last Song Played" 
+                        data-modal-img="last_song.jpg" 
+                        data-modal-body="A timeless classic that never gets old. A.R. Rahman's composition paired with Hariharan's soulful voice hits straight in the heart every single time. It's the kind of melody you close your eyes to and just let the nostalgia take over.">
+                    <div class="media-frame">
+                        <img src="last_song.jpg" alt="Tu Hi Re Song">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Last Song</span>
+                        <h3>"Tu Hi Re"</h3>
+                        <p>A soulful melody that feels like pure nostalgia and longing.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Jailer-2"
+                         data-modal-tag="Last Movie Watch"
+                         data-modal-img="Jailer 2 Cast.jpg"
+                         data-modal-body="Having seen the prequel, I was wondering what the whole hype was about until I was in the threatre experiencing all the action and slo-mo shots in 4K. The movie was a visual treat and the background score was phenomenal. The after effects of this movie is that I haven't stopped singing the background score since I left the theatre and never missed a chance to do a slo-mo walk like I am the main character."
+                         data-modal-link="#">
+                    <div class="media-frame">
+                        <img src="Jailer 2 poster.jpg" alt="Movie">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Last Movie Watch</span>
+                        <h3>"Jailer-2"</h3>
+                        <p>A movie that I watched 'cause of the curiosity in what the hype was about.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Raghu Dixit's Concert at BGU"
+                         data-modal-tag="Last Concert"
+                         data-modal-img="raghu_dixit.jpg"
+                         data-modal-body="What's a life without loud music and little dance while you sing the song out loud. One such amazing experience was this concert which was a last-minute plan."
+                         data-modal-link="#">
+                    <div class="media-frame">
+                        <img src="raghu_dixit.jpg" alt="Movie">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Last Concert</span>
+                        <h3>"Raghu Dixit's Concert at BGU"</h3>
+                        <p>Away from all the 'Lokada Kaalaji'</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION 9: VOLUNTEERING -->
+        <section class="module-section" data-category="life">
+            <div class="module-header">
+                <i data-lucide="heart"></i>
+                <h2>Volunteering</h2>
+            </div>
+            <div class="items-grid">
+                 <article class="sub-card clickable"
+                         data-modal-title="School"
+                         data-modal-tag="The Start"
+                         data-modal-img="school.jpg"
+                         data-modal-body="I have always been a curious learner and a passionate volunteer. My journey of volunteering started with my school, where I actively participated in various events. Through volunteering, I learned the value of empathy, teamwork, and making a positive impact on society. These experiences laid the foundation for my continued involvement in community service and shaped my perspective on the importance of giving back to the community.">
+                    <div class="media-frame">
+                        <img src="school.jpg" alt="community">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">The Start</span>
+                        <h3>School</h3>
+                        <p>Know how it started</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Blind School Visit"
+                         data-modal-tag="Community"
+                         data-modal-img="blind_school.jpg"
+                         data-modal-body="A visit to a blind school where I had the opportunity to interact with the students and learn about their experiences. It was a humbling experience that made me appreciate the importance of accessibility and inclusivity in our society. The students were incredibly resilient; the talents they possess are inspiring, and I left the school with a renewed sense of purpose to contribute to the community in meaningful ways.">
+                    <div class="media-frame">
+                        <img src="blind_school.jpg" alt="Mentorship">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Community</span>
+                        <h3>NGO visit</h3>
+                        <p>Visited a Blinds-care NGO as a part of CIE3 activity-Universal Human Values.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Volunteer at Namma Kavacha"
+                         data-modal-tag="Community for Nature"
+                         data-modal-img="kavacha.jpg"
+                         data-modal-body="A new journey at Namma Kavacha, a community dedicated to protecting and preserving the natural environment. I had the opportunity to participate in various conservation activities, including tree planting, clean-up drives, and awareness campaigns. It was a rewarding experience that allowed me to connect with like-minded individuals who are passionate about making a positive impact on the planet.">
+                    <div class="media-frame">
+                        <img src="kavacha.jpg" alt="community">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Community for Nature</span>
+                        <h3>Volunteer at Namma Kavacha</h3>
+                        <p>A journey to return to nature and contribute to its preservation.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Green Ganesha"
+                         data-modal-tag="Community for Nature"
+                         data-modal-img="green_ganesha.jpg"
+                         data-modal-body="My first event with Namma Kavacha where an eco-friendly Ganesha idol was made using clay soil and seeds that regenerates into a plant after visarjane. The event was a great success, and it was heartening to see the community come together to celebrate the festival in an environmentally conscious way. The experience reinforced my belief in the power of collective action and the importance of sustainable practices in our daily lives.">
+                    <div class="media-frame">
+                        <img src="green_ganesha.jpg" alt="community">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Community for Nature</span>
+                        <h3>Green Ganesha</h3>
+                        <p>A sustainable celebration of the festival with an eco-friendly Ganesha idol.</p>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+                </div>
+                </section>
+
+                <!-- SECTION 10: MUSIC -->
+        <section class="module-section" data-category="life">
+                <div class="module-header">
+                <i data-lucide="music"></i>
+                <h2>Music Journey</h2>
+                </div>
+                <div class="items-grid">
+                 <article class="sub-card clickable"
+                         data-modal-title="Kehna Hi Kya"
+                         data-modal-tag="Music Reel - Cover Song"
+                         data-modal-img="kehna hi kya.jpg"
+                         data-modal-body="A soulful rendition of the classic song 'Kehna Hi Kya' that captures the essence of love and longing. Hear to know how we sang."
+                         data-modal-link="https://www.instagram.com/reel/DVLFaxNku8o/?dlrf=Z2MxaWs5Y2N5ZHds">
+                    <div class="media-frame">
+                        <img src="kehna hi kya.jpg" alt="community">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Music Reel - Cover Song</span>
+                        <h3>Kehna Hi Kya</h3>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Nodaiyya Kwaate Lingave"
+                         data-modal-tag="Music Reel-Cover Song"
+                         data-modal-img="nodaiyya.jpg"
+                         data-modal-body="A lively cover on this song that crossed 50k+ views on Instagram."
+                         data-modal-link="https://www.instagram.com/reel/DVRPnGfkiDL/?exln=ZHh5b3A4dHg5NTV3">
+                    <div class="media-frame">
+                        <img src="nodaiyya.jpg" alt="Mentorship">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Music Reel - Cover Song</span>
+                        <h3>Nodaiyya Kwaate Lingave</h3>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Magalu Janaki Title Song:The Spoof Version"
+                         data-modal-tag="Music Reel-Parody"
+                         data-modal-img="magaLu jaanaki.jpg"
+                         data-modal-body="An humourous parody of the popular title song 'Magalu Janaki' that adds a comedic twist to the original lyrics. The spoof version is a lighthearted take on the song, bringing laughter and entertainment to the daily bus commuters."
+                         data-modal-link="https://www.instagram.com/reel/DWRluqHEqIa/?cplk=MWQ0d2JqY3MwbWFzYQ==">
+                    <div class="media-frame">
+                        <img src="magaLu jaanaki.jpg" alt="community">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Music Reel - Parody</span>
+                        <h3>Magalu Janaki Title Song:The Spoof Version</h3>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+                <article class="sub-card clickable" 
+                         data-modal-title="Hacchevu Kannadada Deepa"
+                         data-modal-tag="Music Reel-Cover Song"
+                         data-modal-img="kannada.jpg"
+                         data-modal-body="When remembering the school days, we set up our own concert. Celebrating Kannada-everyday."
+                         data-modal-link="https://www.instagram.com/reel/DfboKJPSnD7/?mdxt=NWE3Z3k3M29jdms4">
+                    <div class="media-frame">
+                        <img src="kannada.jpg" alt="community">
+                        <div class="click-overlay"><i data-lucide="maximize-2"></i> Click to Open</div>
+                    </div>
+                    <div class="sub-card-body">
+                        <span class="tag">Music Reel - Cover Song</span>
+                        <h3>Hacchevu Kannadada Deepa</h3>
+                        <span class="click-hint">Click to Explore </span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- REVEAL MODAL DIALOG (UNIVERSAL) -->
+    <div class="modal-overlay" id="infoModal">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose"><i data-lucide="x"></i></button>
+            <div class="modal-media">
+                <img id="modalImg" src="" alt="Modal Display">
+            </div>
+            <div class="modal-body">
+                <span class="tag" id="modalTag">Category Tag</span>
+                <h2 id="modalTitle">Modal Heading</h2>
+                <p id="modalDescription">Detailed modal content paragraph will populate dynamically here.</p>
+                <a id="modalLink" href="#" target="_blank" class="modal-btn">Visit Related Link →</a>
+            </div>
+        </div>
+    </div>
+
+     <!-- Mandatory Sincere Acknowledgement to Prof TM Srinath -->
+            <div class="ack-box">
+                <p><strong>Acknowledgements:</strong> My sincere thanks to Business Communication Professor, <strong>Prof. TM Srinath</strong>, for initiating me into creating my very first website and guiding this experiential communication journey.</p>
+            </div>
+
+    <!-- GRAND MUSEUM MANIFESTO & ACKNOWLEDGEMENTS -->
+    <footer class="museum-manifesto">
+        <div class="manifesto-card">
+            <h2>The Museum Statement</h2>
+            <p class="handwritten">"I am a museum of learning — a living collection of everything I have attempted, failed at, refined, and succeeded at."</p>
+
+            <span class="signature">— Designed with curiosity & intention for CIE 3.</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
